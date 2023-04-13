@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="Atras" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Atras</Value>
+    </Setting>
+    <Setting Name="ColorP" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">LightSteelBlue</Value>
+    </Setting>
+    <Setting Name="ColorS" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Aquamarine</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

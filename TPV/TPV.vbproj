@@ -1,0 +1,672 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD2C718F-8129-4F31-AF9E-C1C5EBD03F76}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>TPV.My.MyApplication</StartupObject>
+    <RootNamespace>TPV</RootNamespace>
+    <AssemblyName>TPV</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>TPV.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>TPV.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>Off</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.10.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing">
+      <HintPath>..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Albaran.designer.vb">
+      <DependentUpon>Albaran.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Albaran.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Albaranes.designer.vb">
+      <DependentUpon>Albaranes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Albaranes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CargarCierreCaja.Designer.vb">
+      <DependentUpon>CargarCierreCaja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CargarCierreCaja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras.Designer.vb">
+      <DependentUpon>Compras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisabledProducts.Designer.vb">
+      <DependentUpon>DisabledProducts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DisabledProducts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturar.designer.vb">
+      <DependentUpon>Facturar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Facturar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacturasRealizadas.designer.vb">
+      <DependentUpon>FacturasRealizadas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FacturasRealizadas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FiltradorFacturasRealizadas.designer.vb">
+      <DependentUpon>FiltradorFacturasRealizadas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FiltradorFacturasRealizadas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FiltroCategorias.designer.vb">
+      <DependentUpon>FiltroCategorias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FiltroCategorias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CierreCaja.Designer.vb">
+      <DependentUpon>CierreCaja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CierreCaja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config.Designer.vb">
+      <DependentUpon>Config.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetalleTicket.Designer.vb">
+      <DependentUpon>DetalleTicket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleTicket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DirectionList.Designer.vb">
+      <DependentUpon>DirectionList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DirectionList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empresa.designer.vb">
+      <DependentUpon>Empresa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Empresa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionClientes.Designer.vb">
+      <DependentUpon>GestionClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GestionClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item.Designer.vb">
+      <DependentUpon>Item.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Item.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListaClientes.Designer.vb">
+      <DependentUpon>ListaClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListaClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaCompras.Designer.vb">
+      <DependentUpon>ListaCompras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListaCompras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado.Designer.vb">
+      <DependentUpon>Listado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Listado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoCierres.Designer.vb">
+      <DependentUpon>ListadoCierres.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoCierres.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaRegularizaciones.Designer.vb">
+      <DependentUpon>ListaRegularizaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListaRegularizaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadData.Designer.vb">
+      <DependentUpon>LoadData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoadData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuFacturacion.Designer.vb">
+      <DependentUpon>MenuFacturacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuFacturacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuGestion.Designer.vb">
+      <DependentUpon>MenuGestion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuGestion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionProductos.Designer.vb">
+      <DependentUpon>GestionProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GestionProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCategorias.Designer.vb">
+      <DependentUpon>GestionCategorias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCategorias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuInventario.Designer.vb">
+      <DependentUpon>MenuInventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuInventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.Designer.vb">
+      <DependentUpon>MenuPrincipal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OptionsLineTicket.Designer.vb">
+      <DependentUpon>OptionsLineTicket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsLineTicket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FiltroProductos.designer.vb">
+      <DependentUpon>FiltroProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FiltroProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Regularizaciones.Designer.vb">
+      <DependentUpon>Regularizaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Regularizaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportesCompras.Designer.vb">
+      <DependentUpon>ReportesCompras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesCompras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketsParados.Designer.vb">
+      <DependentUpon>TicketsParados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TicketsParados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TotalesVentasProductos.Designer.vb">
+      <DependentUpon>TotalesVentasProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TotalesVentasProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TPVForm.Designer.vb">
+      <DependentUpon>TPVForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TPVForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas.Designer.vb">
+      <DependentUpon>Ventas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaStock.Designer.vb">
+      <DependentUpon>VistaStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VistaStock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Albaran.resx">
+      <DependentUpon>Albaran.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Albaranes.resx">
+      <DependentUpon>Albaranes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CargarCierreCaja.resx">
+      <DependentUpon>CargarCierreCaja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras.resx">
+      <DependentUpon>Compras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisabledProducts.resx">
+      <DependentUpon>DisabledProducts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturar.resx">
+      <DependentUpon>Facturar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacturasRealizadas.resx">
+      <DependentUpon>FacturasRealizadas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiltradorFacturasRealizadas.resx">
+      <DependentUpon>FiltradorFacturasRealizadas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiltroCategorias.resx">
+      <DependentUpon>FiltroCategorias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CierreCaja.resx">
+      <DependentUpon>CierreCaja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config.resx">
+      <DependentUpon>Config.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetalleTicket.resx">
+      <DependentUpon>DetalleTicket.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DirectionList.resx">
+      <DependentUpon>DirectionList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empresa.resx">
+      <DependentUpon>Empresa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCategorias.resx">
+      <DependentUpon>GestionCategorias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionClientes.resx">
+      <DependentUpon>GestionClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item.resx">
+      <DependentUpon>Item.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionProductos.resx">
+      <DependentUpon>GestionProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaClientes.resx">
+      <DependentUpon>ListaClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaCompras.resx">
+      <DependentUpon>ListaCompras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado.resx">
+      <DependentUpon>Listado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoCierres.resx">
+      <DependentUpon>ListadoCierres.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaRegularizaciones.resx">
+      <DependentUpon>ListaRegularizaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadData.resx">
+      <DependentUpon>LoadData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuFacturacion.resx">
+      <DependentUpon>MenuFacturacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuGestion.resx">
+      <DependentUpon>MenuGestion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuInventario.resx">
+      <DependentUpon>MenuInventario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsLineTicket.resx">
+      <DependentUpon>OptionsLineTicket.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiltroProductos.resx">
+      <DependentUpon>FiltroProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Regularizaciones.resx">
+      <DependentUpon>Regularizaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="ReportCompras.rdlc" />
+    <EmbeddedResource Include="ReportesCompras.resx">
+      <DependentUpon>ReportesCompras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportTotalesVentasProductos.rdlc" />
+    <EmbeddedResource Include="TicketsParados.resx">
+      <DependentUpon>TicketsParados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TotalesVentasProductos.resx">
+      <DependentUpon>TotalesVentasProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TPVForm.resx">
+      <DependentUpon>TPVForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas.resx">
+      <DependentUpon>Ventas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaStock.resx">
+      <DependentUpon>VistaStock.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+CategoryDataTable.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+CategoryRow.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+CategoryRowChangeEvent.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+CategoryRowChangeEventHandler.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+CierresCajaDataTable.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+CierresCajaRow.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+CierresCajaRowChangeEvent.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+CierresCajaRowChangeEventHandler.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+CitiesDataTable.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+CitiesRow.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+CitiesRowChangeEvent.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+CitiesRowChangeEventHandler.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+CiudadesDataTable.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+CiudadesRow.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+CiudadesRowChangeEvent.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+CiudadesRowChangeEventHandler.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+ClientesDataTable.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+ClientesRow.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+ClientesRowChangeEvent.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+ClientesRowChangeEventHandler.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+CountriesDataTable.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+CountriesRow.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+CountriesRowChangeEvent.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+CountriesRowChangeEventHandler.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+DataTable1DataTable.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+DataTable1Row.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+DataTable1RowChangeEvent.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+DataTable1RowChangeEventHandler.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+MesasDataTable.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+MesasRow.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+MesasRowChangeEvent.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+MesasRowChangeEventHandler.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+ProductDataTable.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+ProductRow.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+ProductRowChangeEvent.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+ProductRowChangeEventHandler.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+TicketDataTable.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+TicketDetailDataTable.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+TicketDetailRow.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+TicketDetailRowChangeEvent.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+TicketDetailRowChangeEventHandler.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+TicketRow.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+TicketRowChangeEvent.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+TicketRowChangeEventHandler.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+UsersDataTable.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+UsersRow.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+UsersRowChangeEvent.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV+UsersRowChangeEventHandler.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPV.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPVTableAdapters.CategoryTableAdapter.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPVTableAdapters.CierresCajaTableAdapter.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPVTableAdapters.CitiesTableAdapter.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPVTableAdapters.CiudadesTableAdapter.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPVTableAdapters.ClientesTableAdapter.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPVTableAdapters.CountriesTableAdapter.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPVTableAdapters.DataTable1TableAdapter.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPVTableAdapters.MesasTableAdapter.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPVTableAdapters.ProductTableAdapter.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPVTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPVTableAdapters.TableAdapterManager.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPVTableAdapters.TicketDetailTableAdapter.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPVTableAdapters.TicketTableAdapter.datasource" />
+    <None Include="My Project\DataSources\ConexionBD.DatosTPVTableAdapters.UsersTableAdapter.datasource" />
+    <None Include="My Project\DataSources\TPV.My.MyApplication.datasource" />
+    <None Include="My Project\DataSources\TPV.My.MySettings.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConexionBD\ConexionBD.vbproj">
+      <Project>{e9832748-9d76-4ea5-a118-6856048b48f9}</Project>
+      <Name>ConexionBD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProcesosEmpresariales\ProcesosEmpresariales.vbproj">
+      <Project>{FFACAF35-AE90-4723-91F2-F09111F1807D}</Project>
+      <Name>ProcesosEmpresariales</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\IconoGuardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\primero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\siguiente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no_image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextFile1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-back-ios_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skip-forward_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skip-backward_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-back-circle-outline_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modifyicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card-list_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus_17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\66847.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

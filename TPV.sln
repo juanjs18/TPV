@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TPV", "TPV\TPV.vbproj", "{BD2C718F-8129-4F31-AF9E-C1C5EBD03F76}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E9832748-9D76-4EA5-A118-6856048B48F9} = {E9832748-9D76-4EA5-A118-6856048B48F9}
+		{FFACAF35-AE90-4723-91F2-F09111F1807D} = {FFACAF35-AE90-4723-91F2-F09111F1807D}
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConexionBD", "ConexionBD\ConexionBD.vbproj", "{E9832748-9D76-4EA5-A118-6856048B48F9}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ProcesosEmpresariales", "ProcesosEmpresariales\ProcesosEmpresariales.vbproj", "{FFACAF35-AE90-4723-91F2-F09111F1807D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E9832748-9D76-4EA5-A118-6856048B48F9} = {E9832748-9D76-4EA5-A118-6856048B48F9}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD2C718F-8129-4F31-AF9E-C1C5EBD03F76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD2C718F-8129-4F31-AF9E-C1C5EBD03F76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD2C718F-8129-4F31-AF9E-C1C5EBD03F76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD2C718F-8129-4F31-AF9E-C1C5EBD03F76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9832748-9D76-4EA5-A118-6856048B48F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9832748-9D76-4EA5-A118-6856048B48F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9832748-9D76-4EA5-A118-6856048B48F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9832748-9D76-4EA5-A118-6856048B48F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFACAF35-AE90-4723-91F2-F09111F1807D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFACAF35-AE90-4723-91F2-F09111F1807D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFACAF35-AE90-4723-91F2-F09111F1807D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFACAF35-AE90-4723-91F2-F09111F1807D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7825327D-054F-4C87-B972-8D06E4D124A7}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://virtualdevops/bdpformacio
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ConexionBD\\ConexionBD.vbproj
+		SccProjectName1 = ConexionBD
+		SccLocalPath1 = ConexionBD
+		SccProjectUniqueName2 = ProcesosEmpresariales\\ProcesosEmpresariales.vbproj
+		SccProjectName2 = ProcesosEmpresariales
+		SccLocalPath2 = ProcesosEmpresariales
+		SccProjectUniqueName3 = TPV\\TPV.vbproj
+		SccProjectName3 = TPV
+		SccLocalPath3 = TPV
+	EndGlobalSection
+EndGlobal
